@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE8C6">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="550dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/borda_um_vm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="633dp"
+        android:layout_height="928dp"
+        android:contentDescription="@null"
+        android:src="@drawable/borda_dois_az"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Crie sua"
+                android:textColor="#295264"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="Conta"
+                android:textColor="#142433"
+                android:textSize="54sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_white"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Nome Completo"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite seu nome completo"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Telefone"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite seu telefone"
+                    android:inputType="phone"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Email Corporativo"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmailCorporativo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite seu email corporativo"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Senha"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite sua senha"
+                    android:inputType="textPassword"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Data de Nascimento"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextDataNascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite sua data de nascimento"
+                    android:inputType="date"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Endereço"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite seu endereço"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Empresa"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite sua empresa"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Segmento de Mercado"
+                    android:textColor="#BD2F28"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextSegmentoMercado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_campo"
+                    android:hint="Digite seu segmento de mercado"
+                    android:padding="15dp"
+                    android:textColorHint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/buttonCadastrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_button"
+                    android:padding="15dp"
+                    android:text="Cadastrar"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/buttonFacaLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Já possui uma conta? Faça Login"
+                    android:textColor="#BD2F28"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
