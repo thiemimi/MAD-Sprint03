@@ -51,6 +51,10 @@ class UpdateLeadFragment : Fragment() {
             updateLead()
         }
 
+        binding.SetaVoltar.setOnClickListener{
+            findNavController().navigate(R.id.action_updateLeadFragment_to_leadListFragment)
+        }
+
         setHasOptionsMenu(true)
 
         return binding.root

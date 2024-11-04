@@ -1,6 +1,5 @@
 package com.example.sprint03.model
 
-import LeadDao
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room

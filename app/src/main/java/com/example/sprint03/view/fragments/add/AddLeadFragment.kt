@@ -33,6 +33,9 @@ class AddLeadFragment : Fragment() {
         binding.buttonCadastrarLead.setOnClickListener{
             insertDataToDatabase()
         }
+        binding.SetaVoltar.setOnClickListener{
+            findNavController().navigate(R.id.action_addLeadFragment_to_leadListFragment)
+        }
 
         return binding.root
     }
@@ -52,6 +55,7 @@ class AddLeadFragment : Fragment() {
         }else{
             Toast.makeText(requireContext(), "Por favor preencha todos os campos", Toast.LENGTH_LONG).show()
         }
+
 
     }
 

@@ -1,6 +1,5 @@
 package com.example.sprint03.model
 
-import LeadDao
 import androidx.lifecycle.LiveData
 
 class LeadRepository(private val leadDao: LeadDao) {

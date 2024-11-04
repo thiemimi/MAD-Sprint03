@@ -1,5 +1,6 @@
 package com.example.sprint03.view.fragments.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sprint03.R
 import com.example.sprint03.adapter.LeadsAdapter
 import com.example.sprint03.databinding.FragmentLeadListBinding
+import com.example.sprint03.view.DashboardActivity
 import com.example.sprint03.view.fragments.update.UpdateLeadFragmentArgs
 import com.example.sprint03.viewmodel.LeadViewModel
 
@@ -52,7 +54,16 @@ class LeadListFragment : Fragment() {
             findNavController().navigate(R.id.action_leadListFragment_to_addLeadFragment)
         }
 
+        binding.SetaVoltar.setOnClickListener{
+            abrirDashboard()
+        }
+
         return binding.root
+    }
+
+    private fun abrirDashboard(){
+        val intent = Intent(requireActivity(), DashboardActivity::class.java )
+        startActivity(intent)
     }
 
     override fun onDestroyView() {
