@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.compose.material3.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -14,6 +18,8 @@ import com.example.sprint03.R
 import com.example.sprint03.databinding.FragmentUpdateLeadBinding
 import com.example.sprint03.model.Lead
 import com.example.sprint03.viewmodel.LeadViewModel
+import androidx.appcompat.app.AlertDialog
+
 
 class UpdateLeadFragment : Fragment() {
 
@@ -45,6 +51,8 @@ class UpdateLeadFragment : Fragment() {
             updateLead()
         }
 
+        setHasOptionsMenu(true)
+
         return binding.root
     }
 
@@ -70,6 +78,35 @@ class UpdateLeadFragment : Fragment() {
                 && !(TextUtils.isEmpty(empresa)) && !(TextUtils.isEmpty(email))
                 && !(TextUtils.isEmpty(telefone))
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.menu_delete){
+            deleteLead()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun deleteLead() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Sim") { _, _ ->
+            leadViewModel.deleteLead(args.currentLead)
+            Toast.makeText(requireContext(), "Removido com sucesso: ${args.currentLead.nome}",
+                Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_updateLeadFragment_to_leadListFragment)
+        }
+
+        builder.setNegativeButton("Não") { _, _ -> }
+
+        builder.setTitle("Deletar ${args.currentLead.nome}?")
+        builder.setMessage("Tem certeza que deseja deletar ${args.currentLead.nome}?") // Corrigido aqui
+        builder.create().show()
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -14,4 +14,8 @@ class LeadRepository(private val leadDao: LeadDao) {
     suspend fun updateLead(lead: Lead) {
         leadDao.updateLead(lead)
     }
+
+    suspend fun deleteLead(lead: Lead){
+        leadDao.deleteLead(lead)
+    }
 }

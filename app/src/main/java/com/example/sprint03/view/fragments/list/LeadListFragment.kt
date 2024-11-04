@@ -2,6 +2,9 @@ package com.example.sprint03.view.fragments.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -36,7 +39,7 @@ class LeadListFragment : Fragment() {
         binding.RecyclerViewLeads.layoutManager = LinearLayoutManager(requireContext())
 
         leadViewModel = ViewModelProvider(this).get(LeadViewModel::class.java)
-        leadViewModel.reallAllLead.observe(viewLifecycleOwner, Observer { lead ->
+        leadViewModel.readAllLead.observe(viewLifecycleOwner, Observer { lead ->
             adapter.submitList(lead)
         })
 

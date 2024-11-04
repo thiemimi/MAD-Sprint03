@@ -31,4 +31,10 @@ class LeadViewModel(application: Application): AndroidViewModel(application) {
             repository.updateLead(lead)
         }
     }
+
+    fun deleteLead(lead: Lead){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteLead(lead)
+        }
+    }
 }
