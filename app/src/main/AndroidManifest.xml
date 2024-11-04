@@ -20,12 +20,6 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         />
         <activity
-            android:name=".view.LeadMaisDetalhesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.LeadActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.DashboardActivity"
             android:exported="false" />
         <activity
