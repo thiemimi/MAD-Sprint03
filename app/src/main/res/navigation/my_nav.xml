@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/leadListFragment">
+
+    <fragment
+        android:id="@+id/leadListFragment"
+        android:name="com.example.sprint03.view.fragments.list.LeadListFragment"
+        android:label="Lista Leads"
+        tools:layout="@layout/fragment_lead_list" >
+        <action
+            android:id="@+id/action_leadListFragment_to_addLeadFragment"
+            app:destination="@id/addLeadFragment" />
+        <action
+            android:id="@+id/action_leadListFragment_to_updateLeadFragment"
+            app:destination="@id/updateLeadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLeadFragment"
+        android:name="com.example.sprint03.view.fragments.add.AddLeadFragment"
+        android:label="Adicionar Lead"
+        tools:layout="@layout/fragment_add_lead" >
+        <action
+            android:id="@+id/action_addLeadFragment_to_leadListFragment"
+            app:destination="@id/leadListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLeadFragment"
+        android:name="com.example.sprint03.view.fragments.update.UpdateLeadFragment"
+        android:label="Atualizar Lead" >
+        <action
+            android:id="@+id/action_updateLeadFragment_to_leadListFragment"
+            app:destination="@id/leadListFragment" />
+        <argument
+            android:name="currentLead"
+            app:argType="com.example.sprint03.model.Lead" />
+    </fragment>
+</navigation>

@@ -101,36 +101,6 @@
                     android:textSize="16sp" />
             </FrameLayout>
 
-            <FrameLayout
-                android:id="@+id/CardCadastrarLead"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <View
-                    android:id="@+id/VisualizarLeads"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/background_white" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@null"
-                    android:src="@drawable/icone_cadastrar_leads" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="20sp"
-                    android:text="Cadastrar Leads"
-                    android:textColor="#142433"
-                    android:textSize="16sp" />
-            </FrameLayout>
 
         </LinearLayout>
 

@@ -75,43 +75,4 @@ class LeadActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
-    private fun listaLead(): List<Lead>{
-        return listOf(
-            Lead(
-                1,
-                "João",
-                "Empresa ABC",
-                "Senior VP",
-                "joao@gmail.com",
-                "11994303765"
-            ),
-            Lead(
-                2,
-                "Maria",
-                "Empresa XYZ",
-                "System Administrator",
-                "maria@gmail.com",
-                "11993563049"
-            ),
-            Lead(
-                3,
-                "Fernando",
-                "Empresa ABC",
-                "Senior VP",
-                "fernando@gmail.com",
-                "11994244087"
-            ),
-            Lead(
-                4,
-                "Joana",
-                "Empresa XYZ",
-                "Senior VP",
-                "joana@gmail.com",
-                "119945744087"
-            )
-
-
-        )
-    }
 }

@@ -14,17 +14,8 @@ class DashboardActivity : AppCompatActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.CardCadastrarLead.setOnClickListener{
-            abrirCadastrarLead()
-        }
         binding.CardLead.setOnClickListener{
             abrirLeads()
-        }
-        binding.CardInterest.setOnClickListener{
-            abrirInterests()
-        }
-        binding.CardFeedback.setOnClickListener{
-            abrirFeedback()
         }
 
         binding.buttonLogout.setOnClickListener{
@@ -34,25 +25,11 @@ class DashboardActivity : AppCompatActivity() {
 
     }
 
-    private fun abrirCadastrarLead(){
-        val intent = Intent(this, CadastrarLeadActivity::class.java)
-        startActivity(intent)
-    }
-
     private fun abrirLeads(){
-        val intent = Intent(this, LeadActivity:: class.java)
+        val intent = Intent(this, LeaddActivity:: class.java)
         startActivity(intent)
     }
 
-    private fun abrirInterests(){
-        val intent = Intent(this, InterestsActivity:: class.java)
-        startActivity(intent)
-    }
-
-    private fun abrirFeedback(){
-        val intent = Intent(this, FeedbackActivity:: class.java)
-        startActivity(intent)
-    }
 
     private fun logout(){
         val intent = Intent(this, MainActivity::class.java)
