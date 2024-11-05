@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feedback_nav"
+    app:startDestination="@id/feedbackListFragment">
+
+    <fragment
+        android:id="@+id/feedbackListFragment"
+        android:name="com.example.sprint03.view.fragments.list.FeedbackListFragment"
+        android:label="Feedbacks"
+        tools:layout="@layout/fragment_feedback_list" >
+        <action
+            android:id="@+id/action_feedbackListFragment_to_addFeedbackFragment"
+            app:destination="@id/addFeedbackFragment" />
+        <action
+            android:id="@+id/action_feedbackListFragment_to_updateFeedbackFragment"
+            app:destination="@id/updateFeedbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFeedbackFragment"
+        android:name="com.example.sprint03.view.fragments.add.AddFeedbackFragment"
+        android:label="Adicionar Feedback"
+        tools:layout="@layout/fragment_add_feedback" >
+        <action
+            android:id="@+id/action_addFeedbackFragment_to_feedbackListFragment"
+            app:destination="@id/feedbackListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFeedbackFragment"
+        android:name="com.example.sprint03.view.fragments.update.UpdateFeedbackFragment"
+        android:label="Atualizar Feedback" >
+        <action
+            android:id="@+id/action_updateFeedbackFragment_to_feedbackListFragment"
+            app:destination="@id/feedbackListFragment" />
+        <argument
+            android:name="currentFeedback"
+            app:argType="com.example.sprint03.model.Feedback" />
+    </fragment>
+</navigation>

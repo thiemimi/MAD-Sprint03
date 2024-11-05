@@ -10,7 +10,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.compose.material3.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -23,7 +22,6 @@ import androidx.appcompat.app.AlertDialog
 
 class UpdateLeadFragment : Fragment() {
 
-    // Usando Safe Args para receber os argumentos
     private val args: UpdateLeadFragmentArgs by navArgs()
 
     private var _binding: FragmentUpdateLeadBinding? = null
@@ -107,13 +105,13 @@ class UpdateLeadFragment : Fragment() {
         builder.setNegativeButton("Não") { _, _ -> }
 
         builder.setTitle("Deletar ${args.currentLead.nome}?")
-        builder.setMessage("Tem certeza que deseja deletar ${args.currentLead.nome}?") // Corrigido aqui
+        builder.setMessage("Tem certeza que deseja deletar ${args.currentLead.nome}?")
         builder.create().show()
     }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Evita vazamentos de memória
+        _binding = null
     }
 }

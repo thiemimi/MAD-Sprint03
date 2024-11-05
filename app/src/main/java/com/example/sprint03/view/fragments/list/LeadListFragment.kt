@@ -3,22 +3,17 @@ package com.example.sprint03.view.fragments.list
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sprint03.R
 import com.example.sprint03.adapter.LeadsAdapter
 import com.example.sprint03.databinding.FragmentLeadListBinding
 import com.example.sprint03.view.DashboardActivity
-import com.example.sprint03.view.fragments.update.UpdateLeadFragmentArgs
 import com.example.sprint03.viewmodel.LeadViewModel
 
 class LeadListFragment : Fragment() {

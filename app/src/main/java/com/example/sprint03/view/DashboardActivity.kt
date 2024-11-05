@@ -17,6 +17,9 @@ class DashboardActivity : AppCompatActivity() {
         binding.CardLead.setOnClickListener{
             abrirLeads()
         }
+        binding.CardFeedback.setOnClickListener{
+            abrirFeedback()
+        }
 
         binding.buttonLogout.setOnClickListener{
             logout()
@@ -27,6 +30,11 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun abrirLeads(){
         val intent = Intent(this, LeaddActivity:: class.java)
+        startActivity(intent)
+    }
+
+    private fun abrirFeedback(){
+        val intent = Intent(this, FeedbackActivity:: class.java)
         startActivity(intent)
     }
 

@@ -2,6 +2,7 @@ package com.example.sprint03.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.sprint03.databinding.ActivityMainBinding
 
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContentView(binding.root)
 
         binding.buttonLogin.setOnClickListener(){
-            abrirDashboard()
+           abrirDashboard()
         }
 
         binding.buttonCriarConta.setOnClickListener(){
@@ -33,5 +34,6 @@ class MainActivity : ComponentActivity() {
         val intent = Intent(this, CriarContaActivity::class.java)
         startActivity(intent)
     }
+
 }
 
